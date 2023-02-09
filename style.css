@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very-dark-blue) ;
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 270px;
+    height: 700px;
+    border-radius: 8px;
+    background-color: var(--Dark-desaturated-blue);
+    align-items: center;
+    justify-content: center;
+    /*margin: 100px auto;*/
+    overflow: hidden;
+   
+}
+.right-place{
+    height: 28.3%;  /*checar el filtro morado*/
+    background-color: rgb(75, 24, 109);
+}
+.container-img{
+    width: 100%;
+    filter:opacity(30%);
+}
+.container-title{
+    font-family: "Inter", sans-serif;
+    color: white;
+    margin: 1.1em;
+    text-align: center;
+    font-size: 1.5em;
+}
+.mark{
+    color: var(--Soft-violet);
+}
+
+p{
+    color: var(--Slightly-transparent-white);
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    font-size: .8em;
+    margin: 1em 2.5em;
+    line-height: 1.7em;
+}
+
+.container-stats p{
+    text-transform: uppercase ;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: .7em;
+    letter-spacing: .12em;
+    margin-top: .5em;
+}
+
+.container-stats h3{
+    font-family: "Inter", sans-serif ;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 200px;
+    margin-top: 1em;
+}
+
+.container-stats{
+    margin-top: 0em;
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------for desktop--------------------*/
+@media (min-width:720px){
+    body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        width:900px;
+        height: 350px;
+        display: flex;
+        flex-direction: row-reverse;
+
+    
+    }
+    .right-place{
+        height: 100%;
+        width: 85%;
+    }
+    .container-img{
+        content: url(./images/image-header-desktop.jpg);
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .left-place{
+        width: 800px;
+        height: 350px;
+        padding: 2em 6em 2em 2em;
+    }
+    .container-stats{
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2em;
+    }
+    .container-title{
+        text-align: left;
+        font-size: 1.7em;
+    }
+    p{
+        text-align: left;
+    }
+    .container-stats h3{
+        font-size: 1.2em;
+    }
+}
